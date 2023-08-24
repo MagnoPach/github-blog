@@ -24,7 +24,7 @@ export function Home() {
     const response = await api.get(
       `search/issues?q=${
         query ? query : ""
-      }%20repo:${"pedr0d1as"}/Github-blog-issues`
+      }%20repo:${"MagnoPach"}/github-blog-issues`
     );
     setPosts(response.data.items);
     setPostsCounter(response.data.total_count);
@@ -45,7 +45,7 @@ export function Home() {
           </div>
           <input
             type="text"
-            onBlur={(e) => fetchPosts(e.target.value)}
+            onChange={(e) => fetchPosts(e.target.value)}
             placeholder="Search a Post"
           />
         </SearchSection>
